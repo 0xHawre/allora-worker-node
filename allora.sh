@@ -108,9 +108,21 @@ allorad version
 echo
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Creat new wallet....${RESET}"
-allorad keys add testkey 
+allorad keys add testkey >> seed.txt  
 echo
 
+
+
+echo
+while true; do 
+echo get fucet 
+ADDRESS=$(grep 'address:' seed.txt | sed 's/.*address: //')
+echo "Extracted Address: $ADDRESS"
+
+curl -i "https://faucet.edgenet.allora.network/send/edgenet/${ADDRESS}"
+
+sleep $((25 * 3600))
+done 
 
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
