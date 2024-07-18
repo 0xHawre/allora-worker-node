@@ -115,7 +115,7 @@ echo "Request faucet to your wallet from this link: https://faucet.testnet-1.tes
 echo
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
-git clone https://github.com/allora-network/basic-coin-prediction-node
+git clone https://github.com/0xHawre/basic-coin-prediction-node.git
 cd basic-coin-prediction-node
 mkdir worker-data
 mkdir head-data
