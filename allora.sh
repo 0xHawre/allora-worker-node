@@ -107,12 +107,11 @@ echo -e "${BOLD}${DARK_YELLOW}Checking allorand version...${RESET}"
 allorad version
 echo
 
-echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Importing wallet...${RESET}"
-allorad keys add testkey --recover
+echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Creat new wallet....${RESET}"
+allorad keys add testkey 
 echo
 
-echo "Request faucet to your wallet from this link: https://faucet.testnet-1.testnet.allora.network/"
-echo
+
 
 echo -e "${BOLD}${UNDERLINE}${DARK_YELLOW}Installing worker node...${RESET}"
 git clone https://github.com/0xHawre/basic-coin-prediction-node.git
